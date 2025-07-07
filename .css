@@ -1,0 +1,239 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      animation: slideInLeft 1s ease forwards;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #00bcd4;
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 span {
+      color: #ffeb3b;
+      font-size: 3rem;
+    }
+
+    .hero p {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+    }
+
+    .hero p span {
+      font-weight: bold;
+    }
+
+    .btn {
+      background: white;
+      color: #0072ff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ffeb3b;
+      color: #222;
+    }
+
+    .profile-pic {
+        border-radius: 50%;
+        max-width: 200px;
+        width: 100%;
+        height: auto;   
+        margin: 0 auto;
+        animation: floatPic 4s ease-in-out infinite;
+      }
+
+    .profile-pic:hover {
+      transform: scale(1.05);   
+        transition: transform 0.3s ease;
+    }
+    .about-pic {
+      border-radius: 50%;
+      max-width: 250px;
+      align-items: end;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      animation: floatPic 4s ease-in-out infinite;
+    }
+
+    .about, .projects, .contact, .address {
+      padding: 4rem 2rem;
+      background: white;
+      text-align: center;
+    }
+
+    .about h2, .projects h2, .contact h2, .address h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-pic {
+      max-width: 250px;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .project-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      min-height: 350px;
+    }
+
+    .project-card img {
+      max-width: 100%;
+      max-height: 150px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .project-card h3 {
+      margin: 0.5rem 0 0.25rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 0.75rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background: #0072ff;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background: #005bb5;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #222;
+      color: white;
+    }
+
+    .social-links a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #00bcd4;
+    }
+
+    @keyframes slideInLeft {
+      0% { transform: translateX(-100%); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes floatPic {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
